@@ -10,30 +10,30 @@
     <script src="js/Ingreso.js"></script>
     <script src="js/app.js"></script>
 </head>
-<body>
+<body onload="cargarApp()">
     <div class="cabecero">
         <div class="presupuesto">
             <div class="presupuesto_titulo">
                 <p>Presupuesto Disponible</p>
             </div>
-            <div class="clase presupuesto_valor">+2,000.00</div>
+            <div id="presupuesto" class="clase presupuesto_valor">+2,000.00</div>
             <div class="presupuesto_ingreso limpiarEstilos ">
                 <div class="presupuesto_ingreso--texto">Ingresos</div>
                 <div class="derecha">
-                    <div class="presupuesto_ingreso--valor">+4,000.00</div>
+                    <div id="ingresos" class="presupuesto_ingreso--valor">+4,000.00</div>
                     <div class="presupuesto_ingreso--porcentaje"> </div>
                 </div>
             </div>
             <div class="presupuesto_egreso limpiarEstilos">
                 <div class="presupuesto_egreso--texto">Egresos</div>
                 <div class="derecha limpiarEstilos">
-                    <div class="presupuesto_egreso--valor">-1,900.00</div>
-                    <div class="presupuesto_egreso--porcentaje">45 %</div>
+                    <div id="egresos" class="presupuesto_egreso--valor">-1,900.00</div>
+                    <div id="porcentaje" class="presupuesto_egreso--porcentaje">45 %</div>
                 </div>
             </div>
         </div>
     </div>
-    <div id=" formulario">
+    <div id="formulario">
         <form id="forma">
 
             <div class="agregar">

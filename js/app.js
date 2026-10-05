@@ -54,13 +54,15 @@ const cargarCabecero = () => {
 
     const porcentajeEgreso = egresosTotal / ingresosTotal;
 
-    console.log("Presupuesto:", formatoMoneda(presupuesto));
-    console.log("Porcentaje de egreso:", formatoPorcentaje(porcentajeEgreso));
-    console.log("Total ingresos:", formatoMoneda(ingresosTotal));
-    console.log("Total egresos:", formatoMoneda(egresosTotal));
+    document.getElementById("presupuesto").innerHTML = formatoMoneda(presupuesto);
+    document.getElementById("porcentaje").innerHTML= formatoPorcentaje(porcentajeEgreso);
+    document.getElementById("ingresos").innerHTML= formatoMoneda(ingresosTotal);
+    document.getElementById("egresos").innerHTML= formatoMoneda(egresosTotal);
 };
 
-cargarCabecero();
+const cargarApp = () => {
+    cargarCabecero();
+};
 
 
 
