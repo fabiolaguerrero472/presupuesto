@@ -1,3 +1,4 @@
+//Autor: Fabiola Medina Guerrero
 class Egreso extends Dato {
     static contadorEgresos = 0;
 

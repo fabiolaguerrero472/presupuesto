@@ -1,3 +1,5 @@
+//Autor: Fabiola Medina Guerrero
+
 const ingresos = [
     new Ingreso("Salario", 20000),
     new Ingreso("Venta auto", 50000)
@@ -123,7 +125,7 @@ const crearEgresoHTML = (egreso) => {
 
                 <div class="elemento_eliminar">
                     <button
-                        class="elemento_eliminar_btn"
+                        class="elemento_eliminar--btn"
                         onclick="eliminarEgreso(${egreso.id})">
                         <ion-icon name="close-circle-outline"></ion-icon>
                     </button>
@@ -182,6 +184,8 @@ const agregarDato = () => {
             cargarCabecero();
             cargarEgresos();
         }
+        forma['descripcion'].value = '';
+        forma['valor'].value = '';
     }
 };
 

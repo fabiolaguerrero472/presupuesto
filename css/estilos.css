@@ -171,6 +171,7 @@ body {
 .contenedor {
     width: 860px;
     margin: 60px auto;
+    padding-bottom: 45px;
 }
 
 .ingreso {
@@ -256,3 +257,15 @@ h2 {
 .elemento:hover .elemento_eliminar--btn { display: block; }
 .elemento:hover .elemento_valor { transform: translateX(-20px); }
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #7b4397;
+    background: linear-gradient(to left, #7b4397, #dc2430);
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}

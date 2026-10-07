@@ -1,3 +1,4 @@
+//Autor: Fabiola Medina Guerrero
 class  Dato {constructor(descripción, valor)
     {
         this._descripcion = descripción;

@@ -38,30 +38,12 @@
 
             <div class="agregar">
                 <div class="agregar_contenedor">
-
-                    <!-- Selector -->
                     <select class="agregar_tipo" id="tipo">
                         <option value="ingreso" selected>+</option>
                         <option value="egreso">-</option>
                     </select>
-
-                    <!-- Descripción -->
-                    <input 
-                        type="text" 
-                        class="agregar_descripcion" 
-                        id="descripcion"
-                        placeholder="Agregar Descripción"
-                    >
-
-                    <!-- Valor -->
-                    <input 
-                        type="number" 
-                        class="agregar_valor" 
-                        id="valor"
-                        placeholder="Valor"
-                        step="any"
-                    >
-
+                    <input type="text" class="agregar_descripcion" id="descripcion"placeholder="Agregar Descripción">
+                    <input type="number" class="agregar_valor" id="valor" placeholder="Valor"  step="any">
                     <!-- Botón -->
                     <button class="agregar_btn" onclick="agregarDato()">
                         <ion-icon name="checkmark-circle-outline"></ion-icon>
@@ -112,7 +94,7 @@
                         <div class="elemento_valor">-900.00</div>
                         <div class="elemento_porcentaje">21 %</div>
                         <div class="elemento_eliminar">
-                            <button class="elemento_eliminar_btn">
+                            <button class="elemento_eliminar--btn">
                                 <ion-icon name="close-circle-outline"></ion-icon>
                             </button>
                         </div>
@@ -121,5 +103,15 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Fabiola Medina. Todos los derechos reservados.</p>
+    </footer>
+
+
+
+
 </body>
+
+
 </html>
