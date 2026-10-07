@@ -34,8 +34,9 @@ const totalEgresos = () => {
 const formatoMoneda = (valor) => {
     return valor.toLocaleString("es-MX", {
         style: "currency",
-        currency: "MXN"
-    });
+        currency: "MXN",
+        currencyDisplay: "symbol"
+    }) + " MXN";
 };
 
 const formatoPorcentaje = (valor) => {
@@ -54,7 +55,7 @@ const cargarCabecero = () => {
 
     const presupuesto = ingresosTotal - egresosTotal;
 
-    const porcentajeEgreso = egresosTotal / ingresosTotal;
+    const porcentajeEgreso = ingresosTotal > 0 ? egresosTotal / ingresosTotal : 0;
 
     document.getElementById("presupuesto").innerHTML = formatoMoneda(presupuesto);
     document.getElementById("porcentaje").innerHTML= formatoPorcentaje(porcentajeEgreso);
@@ -99,15 +100,16 @@ const crearIngresoHTML = (ingreso) => {
 
 const cargarEgresos = () => {
     let egresosHTML = '';
-
+    const ingresosTotal = totalIngresos();
     for (let egreso of egresos) {
-        egresosHTML += crearEgresoHTML(egreso);
+        egresosHTML += crearEgresoHTML(egreso, ingresosTotal);
     }
-
     document.getElementById('lista-egresos').innerHTML = egresosHTML;
 };
 
-const crearEgresoHTML = (egreso) => {
+const crearEgresoHTML = (egreso, ingresosTotal) => {
+    const porcentaje = ingresosTotal > 0 ? egreso.valor / ingresosTotal : 0;
+
     let egresoHTML = `
         <div class="elemento limpiarEstilos">
             <div class="elemento_descripcion">
@@ -120,7 +122,7 @@ const crearEgresoHTML = (egreso) => {
                 </div>
 
                 <div class="elemento_porcentaje">
-                    %
+                    ${formatoPorcentaje(porcentaje)}
                 </div>
 
                 <div class="elemento_eliminar">
@@ -155,6 +157,7 @@ const eliminarIngreso = (id) => {
 
     cargarCabecero();
     cargarIngresos();
+    cargarEgresos();
 };
 
 const agregarDato = () => {
@@ -174,7 +177,7 @@ const agregarDato = () => {
 
             cargarCabecero();
             cargarIngresos();
-
+            cargarEgresos();
         } else {
 
             egresos.push(
