@@ -21,13 +21,4 @@ class  Dato {constructor(descripción, valor)
     }
 }
 
-const dato = new Dato("Sueldo", 15000);
-
-console.log(dato.descripcion); 
-console.log(dato.valor);       
-
-dato.descripcion = "Salario"; 
-dato.valor = 20000;            
-
-console.log(dato.descripcion); 
-console.log(dato.valor);       
+    
